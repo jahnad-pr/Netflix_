@@ -1,0 +1,105 @@
+/* Bismillah */
+.Popup{
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all .5s;
+    opacity: 0;
+}
+.Popup .contents{
+    max-width: 800px;
+    width: 85%;
+    border-radius: 13px;
+    overflow: hidden;
+    transition: all .5s;
+    background: #171717;
+    position: relative;
+}
+.yt{
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    position: relative;
+    transition: all .5s;
+}
+.det{
+    width: 100%;
+    background: #171717;
+    padding: 0px 35px 50px 35px ;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+.det h4{
+    font-size: 28px;
+    padding-top: 10px;
+}
+.det :nth-child(2){
+    font-size: 22px;
+}
+.det h4 span{
+    color: rgb(0, 214, 143);
+}
+.det .enf{
+    padding: 2px 6px;
+    border: 1px solid rgb(192, 192, 192);
+    color: #c7c7c7;
+    margin-left: 15px;
+    font-size: 15px;
+    transform: tr;
+}
+.det p{
+    margin-top: 15px;
+}
+.det:last-child span{
+    opacity: 0;
+}
+.contents .play{
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+.contents .closer{
+    background: rgba(0, 0, 0, 0.349);
+    border-radius: 555px;
+    position: absolute;
+    padding: 7px 10px;
+    top: 15px;
+    aspect-ratio: 1/1;
+    right: 15px;
+    z-index: 1;
+}
+.contents .closer svg{
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+}
+iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+.yt::before{
+    content: '';
+    top: 7px;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    background: linear-gradient(transparent,transparent,#171717);
+    position: absolute;
+}
+#popupImg{
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.genn{
+    opacity: .5;
+    font-size: 0px;
+}

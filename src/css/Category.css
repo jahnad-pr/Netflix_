@@ -1,0 +1,79 @@
+/* Bismillah */
+.category{
+    color: white;
+    margin-top: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+.category h1{
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Image container */
+.img-container{
+    width: 100vw;
+    max-width: 1356px;
+    height: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+}
+.img-container .img{
+    height: 100%;
+    width: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.img-container .img:hover img{
+    transform: scale(1.1);
+}
+.img-container .img img{
+    height: 100%;
+    width: auto;
+    transition: all .5s;
+}
+
+
+
+/* Scrollleft and right */
+.scroll-IN,
+.scroll-OUT{
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    height: 250px;
+    background: linear-gradient(to right,black,transparent);
+    opacity: 0;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+}
+.scroll-IN svg{
+    margin-left: 10px;
+    transform: rotate(180deg);
+}
+.scroll-OUT{
+    background: linear-gradient(to left,black,transparent);
+    right: 0;
+}
+.scroll-OUT svg{
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+    .scroll-IN,
+    .scroll-OUT{
+        bottom: 300px;
+    }
+}
+@media screen and (max-width: 624px) {
+    .scroll-IN,
+    .scroll-OUT{
+        bottom: 300px;
+    }
+    .category{
+        margin-top: 0rem;
+    }
+}

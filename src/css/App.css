@@ -1,0 +1,568 @@
+/* Bismillahi Rahmani Raheem */
+/* Basics */
+body {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Roots */
+#root{
+  background: #171717;
+  color: aliceblue;
+  fill: aliceblue;
+}
+#bismillah,
+#rooot {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  animation: apear .5s;
+}
+
+#bismillah::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  aspect-ratio: 16/9;
+  background: linear-gradient(#17171799, #171717);
+}
+
+#rooot {
+  width: calc(100vw - 60px);
+  max-width: 1356px;
+  margin: auto;
+}
+
+/* Main parts */
+.Header {
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 4rem;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  transition: all .6s;
+}
+
+.Body {
+  flex: 1;
+  padding-top: 6.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+.Body div{
+  animation: apear .5s;
+}
+
+/* Header Contents */
+.Header img {
+  width: 7rem;
+}
+
+.Header ul {
+  padding: 20px 0;
+  display: flex;
+  list-style: none;
+  flex: 1;
+  align-items: center;
+  font-size: 14px;
+  margin-left: 40px;
+}
+
+.Header li {
+  margin-right: 20px;
+}
+
+.Header .tool {
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Header .tool img {
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
+  margin-right: 20px;
+}
+
+.Header .tool button {
+  background: #DC2626;
+}
+
+.Header svg {
+  height: 20px;
+  width: 20px;
+  color: #DC2626;
+}
+
+.Header .resB {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.Header .resB p {
+  margin-left: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  opacity: .75;
+}
+
+.Header #voido {
+  flex: 1;
+}
+
+.Header span {
+  display: none;
+}
+
+.Header .tool #profile {
+  width: 40px;
+  height: 40px;
+  filter: invert(0);
+  border-radius: 555px;
+  margin-right: 0;
+}
+
+/* small divce menu */
+.resMenu {
+  background: #2e2e2e;
+  padding: 5px 0px;
+  position: fixed;
+  top: 0;
+  transition: all .5s;
+  left: 30px;
+}
+
+.resMenu ul {
+  list-style: none;
+  padding: 0 5px;
+}
+
+.resMenu ul .li:first-child {
+  padding: 5px 50px 5px 15px;
+  border-bottom: 1px solid rgb(68, 68, 68);
+}
+
+.resMenu ul .li:first-child:hover {
+  background: transparent;
+}
+
+.resMenu ul li:first-child .svg {
+  color: #DC2626;
+}
+
+.resMenu ul li {
+  padding: 5px 50px 5px 15px;
+  display: flex;
+  font-size: 13px;
+}
+
+.resMenu ul li:hover {
+  background: #000;
+}
+
+.resMenu ul svg {
+  width: 15px;
+  margin-right: 15px;
+}
+
+/* Home________________________________ */
+.Home {
+  width: 100%;
+  height: 100%;
+}
+
+button.own {
+  padding: 8px 15px;
+  border-radius: 5px;
+  height: 38px;
+}
+
+.Home .hiHead {
+  padding-top: 6rem;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  margin-bottom: 12rem;
+  color: rgb(224, 224, 224);
+  transition: all .5s;
+}
+
+.hiHead .hiContents {
+  max-width: 32rem;
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.hiContents span {
+  display: flex;
+}
+
+.hiContents button {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: rgb(192, 192, 192);
+}
+
+.hiContents h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.hiContents p:nth-child(2) {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: 10px;
+  color: #16a34a;
+  display: flex;
+}
+
+.hiContents :nth-child(2) span {
+  margin-left: 10px;
+  color: white;
+}
+
+.hiContents :nth-child(3) {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
+/* buttons */
+.hiContents .span {
+  margin-top: 20px;
+}
+
+button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+button.play {
+  background: white;
+  color: #000;
+  margin-left: 0;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+button.play img {
+  margin: 0;
+}
+
+button.info {
+  background: transparent;
+  margin: 0;
+  margin-top: 0;
+  border: 1px solid rgb(68, 68, 68);
+}
+
+button.info img {
+  filter: invert(1);
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.footer .social {
+  margin: 15px;
+}
+
+.footer .social img {
+  height: 28px;
+  width: 28px;
+  filter: invert(1);
+}
+
+.footer ul {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  grid-row-gap: 15px;
+  opacity: .5;
+}
+
+.footer svg {
+  margin-right: 15px;
+}
+
+.footer button {
+  margin-top: 50px;
+  opacity: .5;
+  margin-bottom: 50px;
+}
+
+.footer p:last-child {
+  margin-bottom: 20px;
+  opacity: .5;
+}
+
+.no-decoration {
+  color: white;
+}
+
+.no-decoration:hover {
+  color: white;
+}
+
+@media screen and (max-width:1024px) {
+  .Header .resB {
+    display: flex;
+  }
+
+  .Header ul,
+  .Header .netLogo,
+  .Header #void {
+    display: none;
+  }
+
+  .Header span {
+    display: block;
+    flex: 1;
+  }
+
+  #bismillah {
+    background-size: auto 577px;
+    background-position: center top;
+  }
+
+  #bismillah::before {
+    height: 578px;
+  }
+
+  .footer ul {
+    grid-template-columns: auto auto auto;
+  }
+
+  #rooot {
+    box-sizing: border-box;
+    width: 100vw;
+    padding-left: 20px;
+  }
+}
+
+
+
+/* loading */
+/* Horizontally centers the video */
+.loadingMain {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  transform: translateX(-50%);
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 77;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingMain video {
+  min-width: auto;
+  min-height: 100vh;
+}
+
+@media screen and (max-width:640px) {
+  .footer ul {
+    grid-template-columns: auto auto;
+  }
+  .Home .hiHead{
+    padding-top: 28rem;
+  }
+}
+
+@media screen and (min-width:1356px) {
+  .Header {
+    padding-left: calc((100% - 1356px) / 2);
+    padding-right: calc((100% - 1356px) / 2);
+  }
+}
+
+@media screen and (max-width:340px) {
+  .Header span {
+    flex: 0;
+  }
+
+  .Header {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+}
+
+
+
+
+/* LoginPAge */
+.Login-page{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/IN-en-20240923-TRIFECTA-perspective_74e21c19-980e-45ef-bd6c-78c1a6ce9381_large.jpg');
+  background-size: auto 100%;
+}
+.Login-page::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.753);
+}
+.log-container{
+  width: 70%;
+  max-width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 51;
+  background: rgb(229,9,20);
+  
+}
+#ggl{
+  order: 1;
+  margin: 10px;
+  border-radius: 55px;
+  filter: brightness(0) invert(1);
+}
+#cgl{
+  order: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.Login-page .head{
+  z-index: 52;
+  width: 70%;
+  max-width: 600px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.Login-page .head h1{
+  margin-bottom: 30px;
+}
+.Login-page .head p{
+  color: rgb(126, 124, 124);
+}
+.bottom-container{
+  z-index: 55;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+.bottom-container::after{
+  content: '';
+  display: block;
+  z-index: 56;
+  inset: 0;
+  height: 100%;
+  background: radial-gradient(
+    50% 500% at 50% -420%,
+    rgba(64, 97, 231, 0.4) 80%,
+    rgba(0, 0, 0, 0.1) 100%
+),black;
+  margin-top: 5px;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+.Login-page svg{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  fill: rgb(229,9,20);
+  z-index: 52;
+  height: 2.5rem;
+  width: 9.25rem;
+}
+
+/* blank page */
+.blankk{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(0, 0, 0);
+  z-index: 55;
+}
+
+/* logout-popup */
+.logout-popup{
+  position: absolute;
+  width: 70%;
+  max-width: 300px;
+  height: 500px;
+  background: rgba(100, 82, 82, 0.548);
+  right: 0;
+  top: 0px;
+  opacity: 0;
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  z-index: 61;
+}
+.logout-popup p{
+  font-size: 15px;
+}
+.logout-popup .athe{
+  margin-bottom: 20px;
+}
