@@ -16,7 +16,7 @@ export function MainContext({ children }) {
 
   // To get the Genre of movie
   const genress = async (id,di='') => {
-    await fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=fd3ac1ee9573a823d516f233cfa108a4&&language=en-US')
+    await fetch(`https://api.themoviedb.org/3/genre/movie/list?${import.meta.env.VITE_API_KEY}&&language=en-US`)
       .then(res => res.json())
       .then(data =>{ setGenreso([data.genres.find( gens => gens.id === id )?.name,data.genres.find( gens => gens.id === di )?.name]) }) }
 
@@ -24,7 +24,7 @@ export function MainContext({ children }) {
   // fetch movie data
   const FetchmovieDatas = async (path, cat, genre = ['', '']) => {
     try {
-       await fetch(`https://api.themoviedb.org/3${path}&api_key=fd3ac1ee9573a823d516f233cfa108a4&with_genres=${genre[0]},${genre[1]}`)
+       await fetch(`https://api.themoviedb.org/3${path}&${import.meta.env.VITE_API_KEY}&with_genres=${genre[0]},${genre[1]}`)
         .then((res) => res.json())
         .then((data) => { setMD(prevMD => ({ ...prevMD, [cat]: data.results })) })}
        catch (error) { console.log(error) } }
@@ -33,7 +33,7 @@ export function MainContext({ children }) {
   const fetchTrailer = async(id,cat)=>{
   
     try {
-      await fetch(`https://api.themoviedb.org/3/${cat}/${id}?api_key=fd3ac1ee9573a823d516f233cfa108a4&append_to_response=credits,videos`)
+      await fetch(`https://api.themoviedb.org/3/${cat}/${id}?${import.meta.env.VITE_API_KEY}&append_to_response=credits,videos`)
       .then( res => (res.json()) )
       .then( data => {
         let hi = data.videos.results.find( dato => dato.type==='Trailer' )
