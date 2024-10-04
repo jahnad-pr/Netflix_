@@ -34,6 +34,9 @@ body {
   aspect-ratio: 16/9;
   background: linear-gradient(#17171799, #171717);
 }
+#rooot svg,img{
+  cursor: pointer;
+}
 
 #rooot {
   width: calc(100vw - 60px);

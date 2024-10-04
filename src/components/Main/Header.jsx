@@ -39,7 +39,6 @@ export default function Header({ setInputValue, inputValue }) {
     onAuthStateChanged(auth, (user) => {
 
       if (user) {
-        console.log('hi');
         setSign(user);
       }
     })

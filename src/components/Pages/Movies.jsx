@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Category from '../Lists/Category'
+import { mainData } from '../context/MainContext'
+import { useNavigate } from 'react-router-dom'
 
 // Movies Page
 export default function Movies() {
+
+  const { isSign } = useContext(mainData)
+  const navigate = useNavigate()
+  useEffect(()=>{ !isSign?navigate('/sign'):null },[isSign])
+
+
   return (
     <div className='blank'>
       <Category spec='Trending Now' cat={`${window.location.pathname}Trending Now`} path='/trending/movie/day?language=en-US' />

@@ -1,8 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Category from '../Lists/Category'
+import { mainData } from '../context/MainContext'
+import { useNavigate } from 'react-router-dom'
 
 // Tv show Pgae
 export default function TvShows() {
+
+  const { isSign } = useContext(mainData)
+  const navigate = useNavigate()
+  useEffect(()=>{ !isSign?navigate('/sign'):null },[isSign])
+
+
 
   return (
     <div className='blank'>

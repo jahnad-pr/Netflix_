@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Category from '../Lists/Category'
+import { mainData } from '../context/MainContext'
+import { useNavigate } from 'react-router-dom'
 
 // New Content Page
 export default function NewAndPopuler() {
+
+  const { isSign } = useContext(mainData)
+  const navigatt = useNavigate()
+  useEffect(()=>{ !isSign?navigate('/sign'):null },[isSign])
+
+
+
   return (
     <div className='blank'>
       <Category spec='New TV Shows' cat={`${window.location.pathname}New TV Shows`} path='/discover/tv?sort_by=first_air_date.desc' />
