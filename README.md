@@ -1,8 +1,35 @@
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Netflix UI clone built with React + Vite, using Firebase for auth/data.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React 18 · Vite · React Router · Firebase
+
+## Run Locally
+
+```bash
+git clone https://github.com/Jahanad-pr/Netflix_.git
+cd Netflix_
+npm install
+npm run dev
+```
+
+Open the local URL Vite prints (usually `http://localhost:5173`).
+
+> Uses Firebase — add your own Firebase config in `src/` before running if it's not already set up.
+
+## Scripts
+
+- `npm run dev` – start dev server
+- `npm run build` – build for production
+- `npm run preview` – preview production build
+
+## Deploy
+
+Easiest option: **Vercel**
+1. Import the repo at [vercel.com](https://vercel.com/new)
+2. It auto-detects Vite (build: `npm run build`, output: `dist`)
+3. Deploy
+
+(Netlify works the same way.)
