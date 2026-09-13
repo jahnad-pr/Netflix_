@@ -2,6 +2,8 @@
 
 A simple Netflix UI clone built with React + Vite, using Firebase for auth/data.
 
+<img src="screenshort.png">
+
 ## Tech Stack
 
 React 18 · Vite · React Router · Firebase
